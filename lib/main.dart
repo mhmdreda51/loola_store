@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:loola_store/view/screens/Auth/cubit/auth_cubit.dart';
 import 'package:loola_store/view/screens/home/controller/home_cubit.dart';
 import 'package:loola_store/view/screens/search/controller/search_cubit.dart';
+import 'package:loola_store/view/screens/settings/controller/settings_cubit.dart';
 import 'package:loola_store/view/screens/splash/splash_screen.dart';
 
 import 'core/blocObserver/bloc_observer.dart';
@@ -36,6 +37,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => HomeCubit(),
+        ),
+        BlocProvider(
+          create: (context) => SettingsCubit(),
         ),
       ],
       child: MaterialApp(

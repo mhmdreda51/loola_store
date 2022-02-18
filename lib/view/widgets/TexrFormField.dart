@@ -32,7 +32,7 @@ class AuthTextFromField extends StatelessWidget {
         hintTextDirection: TextDirection.rtl,
         hintStyle: const TextStyle(
           color: AppColors.darkBink,
-          fontSize: 16,
+          fontSize: 13,
           fontWeight: FontWeight.w500,
         ),
         filled: false,

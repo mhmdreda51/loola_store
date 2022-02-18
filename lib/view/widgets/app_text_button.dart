@@ -16,10 +16,8 @@ class AppTextButton extends StatelessWidget {
       onTap: onTap,
       child: Text(
         text,
-        style: GoogleFonts.cairo(
-          color: AppColors.whiteColor,
-          fontSize: fontSize,
-        ),
+        style:
+            GoogleFonts.cairo(color: AppColors.whiteColor, fontSize: fontSize),
       ),
     );
   }

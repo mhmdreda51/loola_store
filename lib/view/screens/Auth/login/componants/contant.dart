@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:loola_store/constants/app_colors.dart';
 import 'package:loola_store/core/router/router.dart';
 import 'package:loola_store/view/componants/app_logo.dart';
 import 'package:loola_store/view/screens/Auth/cubit/auth_cubit.dart';
+import 'package:loola_store/view/screens/Auth/forget_password/password_forget.dart';
 import 'package:loola_store/view/screens/Auth/register/register_screen.dart';
-import 'package:loola_store/view/screens/home/NavScreen.dart';
 import 'package:loola_store/view/widgets/TexrFormField.dart';
-import 'package:loola_store/view/widgets/app_button.dart';
 import 'package:loola_store/view/widgets/app_text_button.dart';
-import 'package:loola_store/view/widgets/category_text.dart';
+
+import '../../../../../constants/app_colors.dart';
+import '../../../../widgets/app_button.dart';
+import '../../../../widgets/category_text.dart';
+import '../../../home/NavScreen.dart';
 
 class LoginScreenContant extends StatelessWidget {
   LoginScreenContant({required this.cubit});
@@ -69,9 +71,7 @@ class LoginScreenContant extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: AppTextButton(
                 fontSize: 9,
-                onTap: () {
-                  //Todo add your magic rout hir
-                },
+                onTap: () => MagicRouter.navigateTo(PasswordForget()),
                 text: "نسيت كلمة المرور؟",
               ),
             ),
@@ -79,6 +79,10 @@ class LoginScreenContant extends StatelessWidget {
               height: 45,
             ),
             AppButton(
+              textColor: Colors.white,
+              paddingTop: 12,
+              width: 343,
+              height: 55,
               text: "تسجيل الدخول",
               color: AppColors.whiteBink.withOpacity(1),
               onPressed: () async {
@@ -87,7 +91,6 @@ class LoginScreenContant extends StatelessWidget {
                   cubit.passwordController.clear();
 
                   cubit.emailController.clear();
-
                   MagicRouter.navigateTo(NavScreen());
                 }
               },

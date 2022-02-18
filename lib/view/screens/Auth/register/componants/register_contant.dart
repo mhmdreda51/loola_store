@@ -8,7 +8,8 @@ import 'package:loola_store/view/screens/home/NavScreen.dart';
 import 'package:loola_store/view/widgets/TexrFormField.dart';
 import 'package:loola_store/view/widgets/app_button.dart';
 import 'package:loola_store/view/widgets/app_text_button.dart';
-import 'package:loola_store/view/widgets/category_text.dart';
+
+import '../../../../widgets/category_text.dart';
 
 class RegisterScreenContant extends StatelessWidget {
   AuthCubit cubit;
@@ -153,6 +154,10 @@ class RegisterScreenContant extends StatelessWidget {
               height: 16,
             ),
             AppButton(
+              textColor: Colors.white,
+              paddingTop: 12,
+              width: 343,
+              height: 55,
               text: "انشاء حساب",
               color: AppColors.whiteBink.withOpacity(1),
               onPressed: () {
@@ -165,6 +170,7 @@ class RegisterScreenContant extends StatelessWidget {
                   cubit.regPasswordController.clear();
                   cubit.regEmailController.clear();
                   cubit.firstNameController.clear();
+                  // loadingDialog(context);
 
                   MagicRouter.navigateTo(NavScreen());
                 }

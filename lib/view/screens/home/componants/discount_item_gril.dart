@@ -100,6 +100,10 @@ class DicountItemGril extends StatelessWidget {
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: AppButton(
+                        textColor: Colors.white,
+                        paddingTop: 12,
+                        width: 343,
+                        height: 55,
                         color: AppColors.darkBink,
                         text: "إضافة الي السلة",
                         onPressed: () {},

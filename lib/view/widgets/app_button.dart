@@ -3,18 +3,28 @@ import 'package:loola_store/constants/app_colors.dart';
 
 class AppButton extends StatelessWidget {
   const AppButton(
-      {required this.text, required this.onPressed, required this.color});
+      {required this.text,
+      required this.onPressed,
+      required this.color,
+      required this.width,
+      required this.height,
+      required this.paddingTop,
+      required this.textColor});
   final String text;
   final VoidCallback onPressed;
   final Color color;
+  final double width;
+  final double height;
+  final double paddingTop;
+  final Color textColor;
   @override
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
       child: Container(
-        width: 343,
-        height: 55,
-        padding: EdgeInsets.only(top: 12),
+        height: height,
+        width: width,
+        padding: EdgeInsets.only(top: paddingTop),
         decoration: BoxDecoration(
             color: color,
             border: Border(
@@ -36,7 +46,7 @@ class AppButton extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 13,
-            color: AppColors.whiteColor,
+            color: textColor,
             fontWeight: FontWeight.bold,
           ),
         ),
